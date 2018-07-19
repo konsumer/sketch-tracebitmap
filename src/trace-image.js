@@ -1,6 +1,4 @@
-export default ctx => {
-  const { document, selection } = ctx
-
+export default ({ document, selection }) => {
   const images = Array.from(selection).filter(sel => sel.class() == 'MSBitmapLayer')
 
   if (!images.length) {
