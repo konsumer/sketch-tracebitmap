@@ -3,13 +3,19 @@
 This is currently only a stub.
 
 
-# tracebitmap
+# Sketch Trace Bitmap
 
 Trace raster images to vector, in sketch.
+
+## Installation
+
+Eventually, CI will build the artifacts to make it easier to install, but for now, it's developer-only. 
 
 ## Development
 
 _This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
+
+You can read more about the process [here](https://developer.sketchapp.com/).
 
 ### Usage
 
