@@ -1,3 +1,8 @@
+# WIP
+
+This is currently only a stub.
+
+
 # tracebitmap
 
 Trace raster images to vector, in sketch.
