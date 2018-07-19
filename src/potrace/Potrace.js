@@ -988,13 +988,15 @@ Potrace.prototype = {
     var bitmap = new Bitmap(image.bitmap.width, image.bitmap.height)
     var pixels = new Uint32Array(image.bitmap.data.split(''))
 
-    for (let idx in pixels) {
+    for (let idx = 0; idx < pixels.length; idx += 4) {
       const opacity = pixels[idx + 3] / 255
       const r = 255 + (pixels[idx + 0] - 255) * opacity
       const g = 255 + (pixels[idx + 1] - 255) * opacity
       const b = 255 + (pixels[idx + 2] - 255) * opacity
       bitmap.data[idx / 4] = utils.luminance(r, g, b)
     }
+
+    log(bitmap.data.slice(0, 100))
 
     this._luminanceData = bitmap
     this._imageLoaded = true

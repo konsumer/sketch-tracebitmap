@@ -7,18 +7,12 @@
       "name": "Trace Image",
       "identifier": "trace-image",
       "script": "./trace-image.js"
-    },
-    {
-      "name": "Trace Background Pattern",
-      "identifier": "trace-background",
-      "script": "./trace-background.js"
     }
   ],
   "menu": {
     "title": "Trace Bitmap",
     "items": [
-      "trace-image",
-      "trace-background"
+      "trace-image"
     ]
   }
 }
