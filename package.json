@@ -24,8 +24,12 @@
     "@skpm/builder": "^0.5.2"
   },
   "author": "David Konsumer <konsumer@jetboystudio.com>",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/konsumer/sketch-tracebitmap.git"
+  },
+  "dependencies": {
+    "imagetracerjs": "^1.2.4",
+    "png.js": "^0.2.1"
   }
 }
