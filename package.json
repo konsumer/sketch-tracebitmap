@@ -7,7 +7,7 @@
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "tracebitmap",
+    "name": "Trace Bitmap",
     "manifest": "src/manifest.json",
     "main": "tracebitmap.sketchplugin",
     "assets": [
