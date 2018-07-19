@@ -1,0 +1,1 @@
+This is based on [node-potrace](https://github.com/tooolbox/node-potrace), but made to work in the context of a sketch plugin.
