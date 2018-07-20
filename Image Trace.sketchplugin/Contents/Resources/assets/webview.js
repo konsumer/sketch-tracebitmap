@@ -11,7 +11,7 @@ window.update = base64Image => {
 
 // called from parent to clear screen
 window.emptyState = () => {
-  s('#output')[0].src = 'assets/black1px.png'
+  s('#output')[0].src = 'assets/black1px.png?t=' + Date.now()
 }
 
 // update SVG output, using preset

@@ -1,5 +1,8 @@
 @import "MochaJSDelegate.js";
 
+const panelHeight = 300
+const panelWidth = 300
+
 function changePanelHeight(panel, height) {
   var frame = panel.frame();
   var previousHeight = frame.size.height;
@@ -11,11 +14,11 @@ function changePanelHeight(panel, height) {
 }
 
 function expandPanel(panel) {
-  changePanelHeight(panel, 196);
+  changePanelHeight(panel, panelHeight + 70);
 }
 
 function minimizePanel(panel) {
-  changePanelHeight(panel, 148);
+  changePanelHeight(panel, panelHeight + 22);
 }
 
 function extractBase64FromSelection(selection) {
@@ -43,7 +46,7 @@ function onRun(context) {
   var identifier = "co.awkward.alembic";
   if (threadDictionary[identifier]) return;
 
-  var webView = WebView.alloc().initWithFrame(NSMakeRect(0, 0, 294, 126));
+  var webView = WebView.alloc().initWithFrame(NSMakeRect(0, 0, panelWidth, panelHeight));
   var windowObject = webView.windowScriptObject();
 
   var selection = context.selection;
@@ -52,7 +55,7 @@ function onRun(context) {
   COScript.currentCOScript().setShouldKeepAround_(true);
 
   var panel = NSPanel.alloc().init();
-  panel.setFrame_display(NSMakeRect(0, 0, 294, 170), true);
+  panel.setFrame_display(NSMakeRect(0, 0, panelWidth, panelHeight + 44), true);
   panel.setStyleMask(NSTexturedBackgroundWindowMask | NSTitledWindowMask | NSClosableWindowMask | NSFullSizeContentViewWindowMask);
   panel.setBackgroundColor(NSColor.whiteColor());
   panel.setLevel(NSFloatingWindowLevel);
@@ -64,7 +67,7 @@ function onRun(context) {
   panel.center()
   threadDictionary[identifier] = panel;
 
-  var vibrancy = NSVisualEffectView.alloc().initWithFrame(NSMakeRect(0, 0, 294, 170));
+  var vibrancy = NSVisualEffectView.alloc().initWithFrame(NSMakeRect(0, 0, panelWidth, panelHeight + 44));
   vibrancy.setAppearance(NSAppearance.appearanceNamed(NSAppearanceNameVibrantLight));
   vibrancy.setBlendingMode(NSVisualEffectBlendingModeBehindWindow);
   vibrancy.autoresizingMask = NSViewHeightSizable;
@@ -86,6 +89,8 @@ function onRun(context) {
       svgLayer.setName('SVG Layer')
       context.document.currentPage().addLayers([svgLayer])
       panel.close()
+      threadDictionary.removeObjectForKey(identifier);
+      COScript.currentCOScript().setShouldKeepAround_(false);
     })
   })
 
