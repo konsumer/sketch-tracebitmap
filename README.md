@@ -11,4 +11,4 @@ Download the [zip file](https://github.com/konsumer/sketch-tracebitmap/archive/m
 
 ## thanks
 
-Thanks to [Alembic](https://github.com/awkward/Alembic). It's a rad plugin, and it served as the basis of the webview stuff. I never would have wirked it out without them.
+Thanks to [Alembic](https://github.com/awkward/Alembic). It's a rad plugin, and it served as the basis of the webview stuff. I never would have worked it out without them.
