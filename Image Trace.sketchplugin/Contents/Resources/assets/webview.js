@@ -33,3 +33,5 @@ s('#preset')[0].addEventListener('change', () => updateSVG())
 s('#finished')[0].addEventListener('click', () => {
   window.location.hash = Date.now()
 })
+
+window.emptyState()
