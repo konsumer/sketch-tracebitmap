@@ -1,7 +1,7 @@
 {
   "name": "Image Trace",
   "identifier": "com.jetboystudio.imagetrace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Trace an image as vector",
   "appcast": "https://raw.githubusercontent.com/konsumer/sketch-tracebitmap/master/.appcast.xml",
   "icon": "icon@2x.png",
