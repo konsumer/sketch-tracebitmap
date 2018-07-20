@@ -1,0 +1,49 @@
+<style>
+  html, body {
+    background: black;
+    margin:0;
+    padding: 0;
+  }
+  #settings {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+  #outputzone {
+    margin-top: 50px;
+  }
+  #input {
+    display:none;
+  }
+</style>
+
+<div id="settings">
+  <select id="preset">
+    <option value="default">default</option>
+    <option value="posterized1">posterized1</option>
+    <option value="posterized2">posterized2</option>
+    <option value="posterized3">posterized3</option>
+    <option value="curvy">curvy</option>
+    <option value="sharp">sharp</option>
+    <option value="detailed">detailed</option>
+    <option value="smoothed">smoothed</option>
+    <option value="grayscale">grayscale</option>
+    <option value="fixedpalette">fixedpalette</option>
+    <option value="randomsampling1">randomsampling1</option>
+    <option value="randomsampling2">randomsampling2</option>
+    <option value="artistic1">artistic1</option>
+    <option value="artistic2">artistic2</option>
+    <option value="artistic3">artistic3</option>
+    <option value="artistic4">artistic4</option>
+  </select>
+  <button id="finished">replace</button>
+</div>
+
+<div id="outputzone">
+  <img width="100%" id="output" />
+</div>
+
+<img id="input" src="" />
+
+<script src="assets/imagetracer_v1.2.4.js"></script>
+<script src="assets/webview.js"></script>

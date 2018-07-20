@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Image Trace</title>
+    <link>https://github.com/konsumer/sketch-tracebitmap</link>
+    <description>Trace an image as vector</description>
+    <language>en</language>
+    <item>
+      <title>Image Trace 0.0.1</title>
+      <enclosure url="https://github.com/konsumer/sketch-tracebitmap/releases/download/0.0.1/imagetrace.zip" sparkle:version="1.0"/>
+    </item>
+  </channel>
+</rss>
