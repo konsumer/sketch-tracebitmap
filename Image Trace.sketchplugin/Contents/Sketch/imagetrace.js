@@ -56,7 +56,7 @@ function onRun(context) {
   panel.setStyleMask(NSTexturedBackgroundWindowMask | NSTitledWindowMask | NSClosableWindowMask | NSFullSizeContentViewWindowMask);
   panel.setBackgroundColor(NSColor.whiteColor());
   panel.setLevel(NSFloatingWindowLevel);
-  panel.title = "Alembic";
+  panel.title = "Image Trace";
   panel.titlebarAppearsTransparent = true;
   panel.makeKeyAndOrderFront(null);
   panel.standardWindowButton(NSWindowMiniaturizeButton).setHidden(true);
