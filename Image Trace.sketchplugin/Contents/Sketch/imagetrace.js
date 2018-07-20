@@ -1,8 +1,5 @@
 @import "MochaJSDelegate.js";
 
-const dialogHeight = 375
-const dialogWidth = 300
-
 function changePanelHeight(panel, height) {
   var frame = panel.frame();
   var previousHeight = frame.size.height;
@@ -14,11 +11,11 @@ function changePanelHeight(panel, height) {
 }
 
 function expandPanel(panel) {
-  changePanelHeight(panel, dialogHeight);
+  changePanelHeight(panel, 196);
 }
 
 function minimizePanel(panel) {
-  changePanelHeight(panel, dialogHeight);
+  changePanelHeight(panel, 148);
 }
 
 function extractBase64FromSelection(selection) {
@@ -43,10 +40,10 @@ function extractBase64FromSelection(selection) {
 
 function onRun(context) {
   var threadDictionary = NSThread.mainThread().threadDictionary();
-  var identifier = "com.jetboystudio.imagetrace";
+  var identifier = "co.awkward.alembic";
   if (threadDictionary[identifier]) return;
 
-  var webView = WebView.alloc().initWithFrame(NSMakeRect(0, 0, dialogWidth, dialogHeight));
+  var webView = WebView.alloc().initWithFrame(NSMakeRect(0, 0, 294, 126));
   var windowObject = webView.windowScriptObject();
 
   var selection = context.selection;
@@ -55,11 +52,11 @@ function onRun(context) {
   COScript.currentCOScript().setShouldKeepAround_(true);
 
   var panel = NSPanel.alloc().init();
-  panel.setFrame_display(NSMakeRect(0, 0, dialogWidth, dialogHeight), true);
+  panel.setFrame_display(NSMakeRect(0, 0, 294, 170), true);
   panel.setStyleMask(NSTexturedBackgroundWindowMask | NSTitledWindowMask | NSClosableWindowMask | NSFullSizeContentViewWindowMask);
   panel.setBackgroundColor(NSColor.whiteColor());
   panel.setLevel(NSFloatingWindowLevel);
-  panel.title = "Image Trace";
+  panel.title = "Alembic";
   panel.titlebarAppearsTransparent = true;
   panel.makeKeyAndOrderFront(null);
   panel.standardWindowButton(NSWindowMiniaturizeButton).setHidden(true);
@@ -67,7 +64,7 @@ function onRun(context) {
   panel.center()
   threadDictionary[identifier] = panel;
 
-  var vibrancy = NSVisualEffectView.alloc().initWithFrame(NSMakeRect(0, 0, dialogWidth, dialogHeight));
+  var vibrancy = NSVisualEffectView.alloc().initWithFrame(NSMakeRect(0, 0, 294, 170));
   vibrancy.setAppearance(NSAppearance.appearanceNamed(NSAppearanceNameVibrantLight));
   vibrancy.setBlendingMode(NSVisualEffectBlendingModeBehindWindow);
   vibrancy.autoresizingMask = NSViewHeightSizable;
