@@ -6,7 +6,7 @@ Trace raster images to vector, in sketch.
 
 Download the [zip file](https://github.com/konsumer/sketch-tracebitmap/archive/master.zip), unzip and double-click on `Image Trace.sketchplugin`.
 
-![screenshot](https://media.giphy.com/media/1Xd8oyzgUEtltitXyF/giphy.gif)
+![screenshot](https://media.giphy.com/media/4ZpQShWsAkTXVYaQzR/giphy.gif)
 
 
 ## thanks
