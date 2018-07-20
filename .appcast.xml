@@ -7,7 +7,11 @@
     <language>en</language>
     <item>
       <title>Image Trace 0.0.1</title>
-      <enclosure url="https://github.com/konsumer/sketch-tracebitmap/archive/0.0.1.zip" sparkle:version="1.0"/>
+      <enclosure url="https://github.com/konsumer/sketch-tracebitmap/archive/0.0.1.zip" sparkle:version="0.0.1"/>
+    </item>
+    <item>
+      <title>Image Trace 0.0.2</title>
+      <enclosure url="https://github.com/konsumer/sketch-tracebitmap/archive/0.0.2.zip" sparkle:version="0.0.2"/>
     </item>
   </channel>
 </rss>
